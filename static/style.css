@@ -12,7 +12,7 @@ body {
     top: 0;
     left: 0;
     bottom: 0;
-    background: #00041c;
+    background: #000516;
     overflow-x: auto;
     width: 300px;
     transition: all ease-in-out 0.5s;
@@ -143,6 +143,14 @@ i.menu-mobile {
 
 .menu-nav-active #header {
     left: 0;
+}
+
+#sobremim {
+    background-color: #000926;
+}
+
+.lista {
+    font-size: 20px;
 }
 
 @media (max-width: 1024px) {
