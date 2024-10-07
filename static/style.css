@@ -5,6 +5,7 @@ body {
     font-family: "Ubuntu", Arial;
     width: 100%;
     height: 100%;
+    background-color: #000926;
 }
 
 #header {
@@ -104,11 +105,13 @@ section#inicio {
 
 section#inicio h2 {
     font-size: 6rem;
+    margin-left: 20px;
 }
 
 section#inicio span#subtitle{
     margin-right: 8rem;
     font-size: 1.5rem;
+    margin-left: 20px;
 }
 
 .text-shadow {
@@ -174,4 +177,22 @@ i.menu-mobile {
         margin-right: 0;
         font-size: 1rem;
     }
+}
+
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    width: 12px;
+    background-color:#000516;
+}
+
+*::-webkit-scrollbar-thumb{
+    background-color: #252c90;
+    border-radius: 5%;
+}
+
+.section-bg {
+    background-color: #0a0d1f;
 }

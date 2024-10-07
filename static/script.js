@@ -9,3 +9,4 @@ menuMobile.addEventListener('click', () => {
         : menuMobile.classList.replace("bi-x", "bi-list")
         body.classList.toggle("menu-nav-active")
 })
+
