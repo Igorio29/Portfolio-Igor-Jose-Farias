@@ -85,7 +85,7 @@ body {
 .nav-menu a:hover i,
 .nav-menu .active i,
 .nav-menu .active:focus i,
-.nav-menu li:hover > a i {
+.nav-menu li:hover>a i {
     color: #149ddd;
 }
 
@@ -108,7 +108,7 @@ section#inicio h2 {
     margin-left: 20px;
 }
 
-section#inicio span#subtitle{
+section#inicio span#subtitle {
     margin-right: 8rem;
     font-size: 1.5rem;
     margin-left: 20px;
@@ -185,10 +185,10 @@ i.menu-mobile {
 
 *::-webkit-scrollbar-track {
     width: 12px;
-    background-color:#000516;
+    background-color: #000516;
 }
 
-*::-webkit-scrollbar-thumb{
+*::-webkit-scrollbar-thumb {
     background-color: #252c90;
     border-radius: 5%;
 }
@@ -239,5 +239,29 @@ i.menu-mobile {
 }
 
 .carousel-control-prev {
-    margin-left: -50px;
+    margin-left: -10rem;
+    margin-top: -2rem;
+}
+
+.carousel-control-next {
+    margin-right: -10rem;
+    margin-top: -2rem;
+}
+
+.carousel-indicators {
+    margin-bottom: -35px;
+}
+
+.button-carousel {
+    margin: 150px 0;
+}
+
+@media (max-width: 1860px) {
+    .carousel-control-prev {
+        margin-left: 0;
+    }
+
+    .carousel-control-next {
+        margin-right: 0;
+    }
 }
