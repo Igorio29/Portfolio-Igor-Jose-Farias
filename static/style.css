@@ -256,12 +256,18 @@ i.menu-mobile {
     margin: 150px 0;
 }
 
+
+
 @media (max-width: 1860px) {
     .carousel-control-prev {
-        margin-left: 0;
+        margin-left: 0rem;
     }
 
     .carousel-control-next {
-        margin-right: 0;
+        margin-right: 0rem;
+    }
+
+    .carousel-item {
+        padding-right: 5px;
     }
 }
