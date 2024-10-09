@@ -237,3 +237,7 @@ i.menu-mobile {
     left: -8px;
     border-radius: 50%;
 }
+
+.carousel-control-prev {
+    margin-left: -50px;
+}

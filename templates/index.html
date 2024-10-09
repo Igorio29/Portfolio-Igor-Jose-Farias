@@ -265,59 +265,133 @@
         </section>
         <section id="portfolio" class="section-bg mt-5">
             <div class="container pb-5 pt-5">
-                <h2 class="pb-4">Portfólio</h2>
-                <div id="carouselPortfolio" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                      <li data-target="#carouselPortfolio" data-slide-to="0" class="active"></li>
-                      <li data-target="#carouselPortfolio" data-slide-to="1"></li>
-                      <li data-target="#carouselPortfolio" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <div class="row row-cols-1 row-cols-md-2">
-                            <div class="col mb-4">
-                              <div class="card">
-                                <img src="../static/img/logo_maranata.jpg" class="card-img-top" alt="PROJETO MARANATA">
-                                <div class="card-body">
-                                  <h5 class="card-title">Projeto Maranata</h5>
-                                  <p class="card-text">Um sistema de gerenciamento feito em C# para um grupo de jovens</p>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col mb-4">
-                              <div class="card">
-                                <img src="../static/img/cave-lab.gif" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                  <h5 class="card-title">CaveLAB</h5>
-                                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col mb-4">
-                              <div class="card">
-                                <img src="..." class="card-img-top" alt="...">
-                                <div class="card-body">
-                                  <h5 class="card-title">Biblioteca</h5>
-                                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                      </div>
-                      <div class="carousel-item">
-                      </div>
-                      <div class="carousel-item">
-                      </div>
+                <h2 class="pb-4 text-white">Portfólio</h2>
+                <div id="carouselPortfolio" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselPortfolio" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselPortfolio" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Voltar</span>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="10000">
+
+                            <div class="row row-cols-3 row-cols-md-3">
+                                <div class="col mb-4">
+                                    <div class="card">
+                                        <img src="../static/img/Maranata.png" class="card-img-top"
+                                            alt="PROJETO MARANATA">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Projeto Maranata</h5>
+                                            <p class="card-text">Um sistema de gerenciamento feito em C# para um grupo
+                                                de jovens, primeiro grande projeto.</p>
+                                            <div class="d-flex justify-content-center">
+                                                <a href="../static/img/MARANATA.pdf" target="_blank"
+                                                    class="btn btn-outline-danger me-3"><i
+                                                        class="bi bi-filetype-pdf"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-4">
+                                    <div class="card">
+                                        <img src="../static/img/CAVELAB.png" class="card-img-top" alt="CaveLab">
+                                        <div class="card-body">
+                                            <h5 class="card-title">CaveLAB</h5>
+                                            <p class="card-text">Um pequeno jogo labirinto teste feito em godot para
+                                                melhor compreensão do funcionamento de um jogo.</p>
+                                            <div class="d-flex justify-content-center">
+                                                <a href="https://github.com/Igorio29/CaveLab" target="_blank"
+                                                    class="btn btn-outline-dark me-3"><i class="bi-github"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-4">
+                                    <div class="card">
+                                        <img src="../static/img/MERN-BIBLIOTECA.png" class="card-img-top"
+                                            alt="Mern Biblioteca">
+                                        <div class="card-body">
+                                            <h5 class="card-title">MERN biblioteca</h5>
+                                            <p class="card-text">Uma biblioteca feita usando o esquema MERN: MongoDb,
+                                                Express, React e Node.js.</p>
+                                            <div class="d-flex justify-content-center">
+                                                <a href="https://github.com/Igorio29/mern_biblioteca" target="_blank"
+                                                    class="btn btn-outline-dark me-3"><i class="bi-github"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="10000">
+                            <div class="row row-cols-3 row-cols-md-3">
+                                <div class="col mb-4">
+                                    <div class="card">
+                                        <img src="../static/img/BarbeKing.png" class="card-img-top" alt="Barbe King">
+                                        <div class="card-body">
+                                            <h5 class="card-title">BARBE KING</h5>
+                                            <p class="card-text">Uma barbearia ficticia, foi
+                                                criada
+                                                com intuito de aprimorar minhas habilidades em HTML e CSS.</p>
+                                            <div class="d-flex justify-content-center">
+                                                <a href="https://github.com/Igorio29/Barbearia" target="_blank"
+                                                    class="btn btn-outline-dark me-3"><i class="bi-github"></i></a>
+                                                <a href="https://igorio29.github.io/Barbearia/" target="_blank"
+                                                    class="btn btn-outline-primary me-3"><i
+                                                        class="bi bi-link-45deg"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-4">
+                                    <div class="card">
+                                        <img src="../static/img/Linkedin.png" class="card-img-top" alt="LinkedIn">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Linkedin</h5>
+                                            <p class="card-text">Um site criado para apresentar um seminario sobre a
+                                                plataforma Linkedin.</p>
+                                            <div class="d-flex justify-content-center">
+                                                <a href="https://github.com/Igorio29/Linkedin" target="_blank"
+                                                    class="btn btn-outline-dark me-3"><i class="bi-github"></i></a>
+                                                <a href="https://igorio29.github.io/Linkedin/" target="_blank"
+                                                    class="btn btn-outline-primary me-3"><i
+                                                        class="bi bi-link-45deg"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-4">
+                                    <div class="card">
+                                        <img src="../static/img/NAAHS.png" class="card-img-top" alt="Projeto Naahs">
+                                        <div class="card-body">
+                                            <h5 class="card-title">NAAHS</h5>
+                                            <p class="card-text">Um site para a
+                                                sala de altas habilidades para fins de expor projetos.</p>
+                                            <div class="d-flex justify-content-center">
+                                                <a href="https://github.com/Igorio29/ProjetoNaahs" target="_blank"
+                                                    class="btn btn-outline-dark me-3"><i class="bi-github"></i></a>
+                                                <a href="https://igorio29.github.io/ProjetoNaahs/" target="_blank"
+                                                    class="btn btn-outline-primary me-3"><i
+                                                        class="bi bi-link-45deg"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselPortfolio"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Avançar</span>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselPortfolio"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
                     </button>
-                  </div>
+                </div>
             </div>
         </section>
     </main>
