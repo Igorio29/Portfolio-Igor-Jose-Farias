@@ -271,3 +271,21 @@ i.menu-mobile {
         padding-right: 5px;
     }
 }
+
+.github {
+    border: solid rgb(36, 36, 36) 1px;
+    background-color: white;
+}
+
+.github:hover {
+    background-color: rgb(49, 49, 49);
+    color: white;
+}
+
+.link {
+    background-color: white;
+}
+
+.pdf {
+    background-color: white;
+}
