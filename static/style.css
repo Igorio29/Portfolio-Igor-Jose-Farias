@@ -281,6 +281,10 @@ i.menu-mobile {
     .carousel-item {
         padding-right: 5px;
     }
+
+    [data-anime="right"] {
+        transform: translate3d(10px, 0, 0);
+    }
 }
 
 .github {

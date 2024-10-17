@@ -10,6 +10,8 @@ menuMobile.addEventListener('click', () => {
         body.classList.toggle("menu-nav-active")
 })
 
+//ANIMAÇÕES
+
 const item = document.querySelectorAll("[data-anime]");
 
 const animeScroll = () => {
