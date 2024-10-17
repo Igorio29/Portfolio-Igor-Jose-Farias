@@ -18,6 +18,17 @@
 
 <body>
 
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
+    <div id="sucesso" class="alert alert-success alert-dismissible fade show" role="alert">
+        <i class="bi bi-check-circle-fill"></i> {{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+
     <i class="bi bi-list menu-mobile"></i>
 
     <aside id="header">
@@ -267,7 +278,7 @@
         </section>
         <section id="portfolio" class="section-bg mt-5">
             <div class="container pb-5 pt-5" data-anime="left">
-                <h2 class="pb-4 text-white" >Portfólio</h2>
+                <h2 class="pb-4 text-white">Portfólio</h2>
                 <div id="carouselPortfolio" class="carousel carousel-dark slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselPortfolio" data-bs-slide-to="0"
@@ -432,19 +443,19 @@
                     </div>
                     <div class="col-md-7">
                         <div class="card p-5 h-100 shadow border-0 section-bg  text-white">
-                            <form>
+                            <form action="/send" method="POST">
                                 <div class="form">
                                     <div class="row">
 
                                         <div class="form-group col-md-6">
                                             <label for="idNome">Nome:</label>
                                             <input type="text" class="form-control bg-black border-0 text-white"
-                                                id="idNome" placeholder="Nome Completo" name="nome">
+                                                id="idNome" placeholder="Nome Completo" name="nome" required>
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="idEmail">Email:</label>
                                             <input type="email" class="form-control bg-black border-0 text-white"
-                                                placeholder="emailexemplo@gmail.com" id="idEmail" name="email">
+                                                placeholder="emailexemplo@gmail.com" id="idEmail" name="email" required>
                                         </div>
                                     </div>
                                 </div>
@@ -453,18 +464,35 @@
                                     <div class="form-group mt-4">
                                         <label for="idMensagem">Mensagem:</label>
                                         <textarea type="text" class="form-control bg-black border-0 text-white"
-                                            rows="10" id="idMensagem" name="mensagem"
+                                            rows="10" id="idMensagem" name="mensagem" required
                                             placeholder="Escreva aqui sua mensagem"></textarea>
                                     </div>
                                 </div>
+                                <div class="col-md-3">
+                                    <button id="btn-enviar-no-loader" type="submit"
+                                        class="btn btn-primary btn-sm btn-block mt-3">Enviar</button>
+                                    <button id="btn-enviar-loader" class="d-none btn btn-primary btn-sm btn-block mt-3"
+                                        type="button" disabled>
+                                        <span class="spinner-border spinner-border-sm" role="status"
+                                            aria-hidden="true"></span>
+                                        Enviando...
+                                    </button>
+                                </div>
                             </form>
-                            <button type="submit" class="btn btn-primary btn-sm btn-block mt-3">Enviar</button>
+
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+    <footer id="footer">
+        <div class="container">
+            <div class="text-center">
+                &copy; Copyright <strong>Igorio29</strong>
+            </div>
+        </div>
+    </footer>
     <script src="../static/Bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../static/script.js"></script>
 </body>

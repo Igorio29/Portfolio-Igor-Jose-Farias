@@ -15,6 +15,9 @@ body {
     bottom: 0;
     background: #000516;
     overflow-x: auto;
+    overflow: hidden;
+    /* evita o scroll horizontal */
+
     width: 300px;
     transition: all ease-in-out 0.5s;
     padding: 0 15px;
@@ -91,6 +94,18 @@ body {
 
 #main {
     margin-left: 300px;
+}
+
+#footer {
+    padding: 15px;
+    color: white;
+    font-size: 14px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    z-index: 99999;
+    background-color: #000516;
 }
 
 section#inicio {
@@ -176,6 +191,11 @@ i.menu-mobile {
     section#inicio span#subtitle {
         margin-right: 0;
         font-size: 1rem;
+    }
+
+    #footer {
+        position: relative; /* Deixa o footer não fixo no mobile */
+        width: 100%;
     }
 }
 
@@ -315,20 +335,31 @@ i.menu-mobile {
     opacity: 0;
 }
 
-[data-anime="up"]{
+[data-anime="up"] {
     transform: translate3d(0, 100%, 0);
 }
-[data-anime="down"]{
+
+[data-anime="down"] {
     transform: translate3d(0, -100%, 0);
 }
-[data-anime="right"]{
+
+[data-anime="right"] {
     transform: translate3d(50px, 0, 0);
 }
-[data-anime="left"]{
+
+[data-anime="left"] {
     transform: translate3d(-100%, 0, 0);
 }
 
 [data-anime].animate {
     opacity: 1;
     transform: translate3d(0, 0, 0);
+}
+
+#sucesso {
+    position: fixed;
+    z-index: 10;
+    top: 30px;
+    right: 30px;
+    transition: 1s;
 }

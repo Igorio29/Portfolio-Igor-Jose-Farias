@@ -6,12 +6,12 @@ app = Flask(__name__)
 app.secret_key = "Fartech"
 
 mail_settings = {
-    "MAIL_SERVER" : 'smtp.gmail.com',
+    "MAIL_SERVER": 'smtp.gmail.com',
     "MAIL_PORT": 465,
     "MAIL_USE_TLS": False,
     "MAIL_USE_SSL": True,
     "MAIL_USERNAME": email,
-    "MAIL_PASSWORD": senha
+    "MAIL_PASSWORD": senha  # Lembre-se de usar uma senha de app aqui
 }
 
 app.config.update(mail_settings)
@@ -20,34 +20,32 @@ mail = Mail(app)
 
 class Contato:
     def __init__(self, nome, email, mensagem):
-        self.nome = nome,
-        self.email = email,
+        self.nome = nome
+        self.email = email
         self.mensagem = mensagem
-
-
 
 @app.route('/')
 def index():
     return render_template('index.html')
 
-@app.route('/send', methods=['GET', 'POST'])
+@app.route('/send', methods=['POST'])
 def send():
     if request.method == 'POST':
         formContato = Contato(
-            request.form("nome"),
-            request.form("email"),
-            request.form("mensagem")
+            request.form["nome"],
+            request.form["email"],
+            request.form["mensagem"]
         )
         msg = Message(
-            subject = f'{formContato.nome} te enviou uma mensagem no portfólio',
-            sender = app.config.get("EMAIL_USERNAME"),
-            recipients = ['igorjosefarias3@gmail.com', app.config.ger("MAIL.USERNAME")],
-            body = f'''
+            subject=f'{formContato.nome} te enviou uma mensagem no portfólio',
+            sender=app.config.get("MAIL_USERNAME"),  # Corrigido
+            recipients=['igorjosefarias3@gmail.com', app.config.get("MAIL_USERNAME")],  # Corrigido
+            body=f'''
                 {formContato.nome} com o email {formContato.email}, te enviou a seguinte mensagem:
 
                 {formContato.mensagem}
 
-                responda assim que possivel!
+                Responda assim que possível!
             '''
         )
 
@@ -55,7 +53,6 @@ def send():
 
         flash('Mensagem enviada com sucesso!')
     return redirect('/')
-
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -54,3 +54,21 @@ window.addEventListener("scroll", ()=>{
 
     // Atualiza a barra lateral conforme o scroll
     window.addEventListener('scroll', updateActiveLink);
+
+
+const btnEnviar = document.getElementById("btn-enviar-no-loader")
+const btnEnviarLoader = document.getElementById("btn-enviar-loader")
+
+btnEnviar.addEventListener("click", () => {
+    btnEnviar.classList.add("d-none")
+    btnEnviarLoader.classList.remove("d-none")
+
+    setTimeout(() => {
+        btnEnviar.classList.remove("d-none"); // Mostra o botão de enviar
+        btnEnviarLoader.classList.add("d-none"); // Oculta o loader
+    }, 5000); // 3000 milissegundos = 3 segundos
+})
+
+setTimeout(() => {
+    document.getElementById("sucesso").style.display = 'none'
+}, 7000)
