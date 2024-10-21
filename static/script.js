@@ -36,7 +36,7 @@ window.addEventListener("scroll", ()=>{
 
     // Função para adicionar 'active' no link correto
     function updateActiveLink() {
-        let fromTop = window.scrollY + 50;
+        let fromTop = window.pageYOffset + window.innerHeight * 0.5 ;
 
         sidebarLinks.forEach(link => {
             let section = document.querySelector(link.getAttribute('href'));
@@ -71,4 +71,4 @@ btnEnviar.addEventListener("click", () => {
 
 setTimeout(() => {
     document.getElementById("sucesso").style.display = 'none'
-}, 7000)
+}, 12000)

@@ -11,7 +11,7 @@ mail_settings = {
     "MAIL_USE_TLS": False,
     "MAIL_USE_SSL": True,
     "MAIL_USERNAME": email,
-    "MAIL_PASSWORD": senha  # Lembre-se de usar uma senha de app aqui
+    "MAIL_PASSWORD": senha 
 }
 
 app.config.update(mail_settings)
@@ -51,8 +51,26 @@ def send():
 
         mail.send(msg)
 
+        msg_confirmacao = Message(
+            subject='Confirmação de envio de mensagem',
+            sender=app.config.get("MAIL_USERNAME"),
+            recipients=[formContato.email],
+            body=f'''
+                Olá {formContato.nome},
+
+                Sua mensagem foi recebida com sucesso! Obrigado por entrar em contato.
+                Responderemos o mais breve possível.
+
+                Atenciosamente,
+                Igor
+            '''
+        )
+
+        mail.send(msg_confirmacao)
+
         flash('Mensagem enviada com sucesso!')
     return redirect('/')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
